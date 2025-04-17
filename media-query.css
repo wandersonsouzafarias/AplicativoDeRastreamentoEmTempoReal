@@ -1,0 +1,16 @@
+@media screen and (max-width: 320px) {
+    #map {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 320px ) and (max-width: 428px) {
+    .content {
+        display: block;
+    }
+
+    .footer-col-social {
+        margin-bottom: 30px;
+    }
+}

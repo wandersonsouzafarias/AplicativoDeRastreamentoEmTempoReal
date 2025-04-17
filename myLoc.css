@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+html, body {/*Garante que o body e html ocupem a tela toda.*/
+    height: 100%;/*Com esse height de 100%, já faz com que o rodapé não fique sobrando.*/
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+#fundoHead {
+    background-position: center;
+    height: 200px;
+    background-image: url('imagens/world-11047_1920.jpg');
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+#fundoHead > h1 {
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+}
+#fundoHead > p {
+    text-align: center;
+}
+
+#status {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    margin: auto;
+    border: 2px solid #444;
+    border-radius: 8px;
+}
+
+#form {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#location, #distance {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+#status.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Adicionando um estilo mais visível e destacado para o botão de "Limpar Trilha" */
+#clearPath {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#clearPath:hover {
+    background-color: #c82333;
+}
+
+/* Estilo para os botões de rastreamento */
+#watch, #clearWatch {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#watch {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+#watch:hover {
+    background-color: #218838;
+}
+
+#clearWatch {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+}
+
+#clearWatch:hover {
+    background-color: #e0a800;
+}
+
+/*Configuração do Footer*/
+.content {
+    display: flex;
+    margin: 5px;
+    margin-bottom: 100px;
+    padding: 5px;
+}
+
+.footer-col {
+    width: 100%;
+    float: left;
+    margin: 1px;
+    text-align: center;
+}
+
+.footer-col h1,
+.footer-col p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#imagemDeFundo {
+    background-image: url('imagens/earth-11595_640.jpg');
+}
+
+/* LINKS ÚTEIS */
+.footer-col-links li {
+    text-decoration: none;
+}
+
+/* REDES SOCIAIS */
+.footer-col-social {
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#twitter {
+    margin-right: 20px;
+}
+
+.footer-col-social li .fab {
+    background: black;
+    font-size: 20px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.footer-col-social img {
+    width: 20px;
+}
+
+ul > li {
+    list-style-type: none; /*Tira as bolinhas da li.*/
+    text-decoration: none;
+}
+
+ul > li > a {
+    text-decoration: none; /*Tira o sublinhado do texto.*/
+}
+
+/* AUTORAIS */
+.footer-autorais {
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    clear: both;
+    background-color: #2b2b2b;
+}
+
+
+

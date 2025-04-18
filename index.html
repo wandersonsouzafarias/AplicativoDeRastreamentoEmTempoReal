@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div id="fundoHead">
             <h1>App de Rastreamento em Tempo Real</h1>
-            <p>Descubra sua localização</p>
+            <p id="paragrafoHeader">Descubra sua localização</p>
         </div>
         <!--Exibe a mensagem de rastreamento iniciado ou cancelado.-->
         <div id="status" class="status-message">
@@ -36,7 +36,9 @@
             <div class="card-body text-center">
                 <h5 class="card-title">Sua localização em tempo real</h5>
                 <!--Exibe o mapa do Google-->
-                <div id="map" class="row row-cols-2"></div>
+                <div id="map" class="row row-cols-2">
+                    <h4 id="idH4">Clique no Botão iniciar rastreamento, para visualizar o mapa com sua localização.</h4>
+                </div>
                 <form id="form"><!--Adicionei-->
                     <button type="button" id="watch" class="btn btn-primary">Iniciar Rastreamento</button>
                     <button type="button" id="clearWatch" class="btn btn-primary">Parar Rastreamento</button>
@@ -52,8 +54,8 @@
     <footer class="footer" id="imagemDeFundo">
         <div class="content">
             <div class="footer-col">
-                <h1>Sobre mim</h1>
-                <p>Desenvolvi este aplicativo web estudando pra caramba, através do livro Use a Cabeça HTML,CSS... O livro foi escrito em 2014, logo tive que fazer algumas adaptações, utilizei a inteligência artificial ChatGPT para atualizar um pouco do código é para me ajudar a utilizar uma API de mapas gratuitas. Pois o Google Maps precisar pagar.</p>
+                <h1>Sobre o projeto</h1>
+                <p>Desenvolvi este aplicativo web estudando o livro Use a Cabeça HTML,CSS... O livro foi escrito em 2014, logo tive que fazer algumas adaptações e atualizações no código, utilizei a inteligência artificial ChatGPT para atualizar um pouco do código é para me ajudar a utilizar uma API de mapas gratuitas. Pois o Google Maps precisar pagar.</p>
             </div>
             <div class="footer-col">
                 <h1>Outros Projetos meus</h1>

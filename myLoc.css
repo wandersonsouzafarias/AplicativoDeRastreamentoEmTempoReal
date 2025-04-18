@@ -76,6 +76,16 @@ h1 {
     text-align: center;
 }
 
+#idH4 {
+    width: 290px;
+    margin: auto;
+    margin-top: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    
+}
+
 /* Adicionando um estilo mais visível e destacado para o botão de "Limpar Trilha" */
 #clearPath {
     margin-top: 20px;
@@ -136,15 +146,33 @@ h1 {
 .footer-col {
     width: 100%;
     float: left;
-    margin: 1px;
+    margin-top: 30px;
     text-align: center;
 }
 
-.footer-col h1,
+.footer-col h1 {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(225, 238, 238, 0.356);
+    color: #f0d120;
+}
+
 .footer-col p {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    padding: 5px;
+    color: rgb(40, 70, 240);
+    background-color: rgba(225, 238, 238, 0.123);
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+#paragrafoHeader {
     color: white;
 }
 
@@ -180,6 +208,13 @@ h1 {
     width: 20px;
 }
 
+ul {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(225, 238, 238, 0.137);
+}
+
 ul > li {
     list-style-type: none; /*Tira as bolinhas da li.*/
     text-decoration: none;
@@ -187,6 +222,7 @@ ul > li {
 
 ul > li > a {
     text-decoration: none; /*Tira o sublinhado do texto.*/
+    color:  aliceblue;
 }
 
 /* AUTORAIS */

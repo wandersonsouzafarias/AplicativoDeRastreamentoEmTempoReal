@@ -3,6 +3,10 @@ let map = null; // Variável global do mapa
 let pathCoords = []; // Array para armazenar as coordenadas da trilha
 let pathLine = null; // Variável global para armazenar a linha da trilha
 
+// ============== NOVA CONSTANTE (API KEY) ==============
+const LOCATIONIQ_API_KEY = 'pk.0415fc88b1121c2f5f0598d08318f265'; 
+// ======================================================
+
 // Definir opções para a geolocalização
 const options = {
     enableHighAccuracy: true,
@@ -40,12 +44,17 @@ function clearWatch() {
     }
 }
 
-function displayLocation(position) {
+// ============== FUNÇÃO MODIFICADA ==============
+async function displayLocation(position) { // Adicionei "async"
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
 
+    // Nova chamada para buscar nome da rua
+    const nomeRua = await getStreetName(latitude, longitude); // 👈 NOVO
+
     var div = document.getElementById("location");
-    div.innerHTML = "📍 Você está na Latitude: " + latitude + ", Longitude: " + longitude;
+    div.innerHTML = "📍 Você está na Latitude: " + latitude + ", Longitude: " + longitude + 
+                    "<br>🗺️ Rua: " + nomeRua; // 👈 NOVA LINHA
 
     var km = computeDistance(position.coords, { latitude: 47.624851, longitude: -122.52099 });
     var distance = document.getElementById("distance");
@@ -57,6 +66,7 @@ function displayLocation(position) {
         scrollMapsToPosition(position.coords);
     }
 }
+// ===============================================
 
 function displayError(error) {
     var errorTypes = {
@@ -173,4 +183,18 @@ function updateStatus(message) {
     setTimeout(function () {
         statusDiv.classList.remove("show");
     }, 3000);
+}
+
+// ============== FUNÇÃO NOVA ADICIONADA (FINAL DO ARQUIVO) ==============
+async function getStreetName(latitude, longitude) {
+    try {
+        const response = await fetch(
+            `https://us1.locationiq.com/v1/reverse.php?key=${LOCATIONIQ_API_KEY}&lat=${latitude}&lon=${longitude}&format=json`
+        );
+        const data = await response.json();
+        return data.address?.road || "Rua não identificada";
+    } catch (error) {
+        console.error("Erro ao buscar rua:", error);
+        return "Erro ao carregar nome da rua";
+    }
 }
